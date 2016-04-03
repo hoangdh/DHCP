@@ -40,11 +40,11 @@
 
 <img src="http://i1363.photobucket.com/albums/r714/HoangLove9z/33550_zpsi3bzo3ua.jpg" />
 
-**B1**: Client gửi một bản tin Discovery - có chứa thông tin client (MAC, Tên máy tính,...) với dạng Broadcast để "truy tìm" một DHCP Server để xin cấp phát địa chỉ IP
-**B2**: Khi DHCP Server nhận được một bản tin Discovery sẽ gửi lại cho Client một bản tin Offer - chứa những thông tin IP,thời hạn cho thuê, GW, DNS Server,... dưới dạng Unicast
-**B3**: Client gửi lại một bản tin Request cho Server, để xác nhận lại các thông tin
-**B4**: Server trả về bản tin ACK để hoàn tất quá trình
+- **Bước 1**: Client gửi một bản tin Discovery - có chứa thông tin client (MAC, Tên máy tính,...) với dạng Broadcast để "truy tìm" một DHCP Server để xin cấp phát địa chỉ IP
+- **Bước 2**: Khi DHCP Server nhận được một bản tin Discovery sẽ gửi lại cho Client một bản tin Offer - chứa những thông tin IP,thời hạn cho thuê, GW, DNS Server,... dưới dạng Unicast
+- **Bước 3**: Client gửi lại một bản tin Request cho Server, để xác nhận lại các thông tin
+- **Bước 4**: Server trả về bản tin ACK để hoàn tất quá trình
 
-### 6. Tham khảo:
+### 7. Tham khảo:
 - http://vdo.vn/cong-nghe-thong-tin/cac-khai-niem-co-ban-ve-dhcp.html
 - https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
