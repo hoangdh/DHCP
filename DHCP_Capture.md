@@ -47,4 +47,4 @@ Và một số thông tin yêu cầu Server
 
 Gói này được Unicast đến Client
 
-<img src="http://i.imgur.com/jkFGEgC.png />
+<img src="http://i.imgur.com/jkFGEgC.png" />
