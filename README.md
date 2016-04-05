@@ -46,6 +46,29 @@
 - **Bước 3**: Client gửi lại một bản tin Request cho Server, để xác nhận lại các thông tin
 - **Bước 4**: Server trả về bản tin ACK để hoàn tất quá trình
 
-### 7. Tham khảo:
+### 7. DHCP Header:
+
+<img src="http://itnotes.in/wp-content/uploads/2015/02/figure_2_dhcp.gif" />
+
+Tên Field | Kích thước (byte) | Mô tả |
+--- | --- | --- |
+Op | 1 | *Operation Code*: Chỉ ra cho ta thấy loại thông điệp. Giá trị 1 là request message, 2 là reply message. |
+HType | 1 | *Hardware Type*: Loại công nghệ mà mạng đó đang sử dụng. VD: Ethernet,... |
+HLen | 1 | *Hardware Address Length*: Độ dài của địa chỉ phần cứng của công nghệ mạng ở trên. VD MAC=6 |
+Hops | 1 | *Hops*: Có giá trị bằng 0 trước khi gửi yêu cầu, khi qua mỗi Relay Agent sẽ được tăng thêm 1 |
+XID | 4 | *Transaction Identifier*: Một trường dài 32bit được client tạo ra, để liên kết thông điệp yêu cầu và phản hồi từ máy chủ DHCP|
+Secs | 2 | *Seconds*: Số giây mà client gửi thông điệp đến server|
+Flags | 2 | Đây là một loại dấu hiệu để nhận biết gói tin client có phải là Broadcast (1) hay không. |
+CIAddr | 4 | *Client IP Address*: Máy khách sẽ đưa IP của nó vào trường này nếu nó hợp lệ hoặc đang trong các trạng thái BOUND, RENEWING, REBINDING; ngược lại giá trị bằng 0 |
+YIAddr | 4 | *"Your" IP Address* Đây là địa chỉ IP mà server gán cho client |
+SIAddr | 4 | *Server IP Address* Địa chỉ của DHCP mà client giao tiếp để thuê IP trong suốt thời gian ở trong mạng này |
+GIAddr | 4 | *Gateway IP Address*Địa chỉ GW để mạng này ra ngoài mạng khác, Internet,... |
+CHAddr | 16 | *Client Hardware Address* Địa chỉ MAC của client, dùng để xác định và giao tiếp |
+SName | 64 | *Server Name* Tên của server, có thể là domain của server |
+File | 128 | *Boot Filename* Với client, khởi động thông điệp DHCPDiscover. Với server thì nó dùng để gửi đi các thông điệp Off |
+Options | Variable | Các tùy chọn, các thông số đi kèm (nếu có) |
+
+### 8. Tham khảo:
 - http://vdo.vn/cong-nghe-thong-tin/cac-khai-niem-co-ban-ve-dhcp.html
 - https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
+- http://www.tcpipguide.com/free/t_DHCPMessageFormat.htm
