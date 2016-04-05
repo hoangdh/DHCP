@@ -45,6 +45,16 @@ Và một số thông tin yêu cầu Server
 
 #### Gói Offer từ server
 
-Gói này được Unicast đến Client
+Gói này được Unicast đến Client. Nếu trong mạng có nhiều DHCP Server và gửi lại cho client, Client sẽ nhận gói Offer đầu tiên.
 
-<img src="http://i.imgur.com/jkFGEgC.png" />
+<img src="http://i.imgur.com/jkFGEgC.png" width=50% height=50% />
+
+Chứa các thông tin mà Discover yêu cầu
+
+<img src="http://i.imgur.com/nNQQmMh.png" width=50% height=50% />
+
+#### Gói Request gửi Broadcast tới (các) server
+
+Khi nhận được gói Offer trả về chứa các thông tin cấu hình, client sẽ Broadcast một bản tin Request để gửi đến server DHCP (1) đã trả lời nó trước và nếu có một server DHCP khác đã nhận được bản tin Offer chưa kịp trả lời là "Tôi đã nhận server (1)."
+
+<img src="http://i.imgur.com/KAlIMRo.png" width=50% height=50% />
