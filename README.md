@@ -39,6 +39,8 @@
 
 ### 6. Cơ chế hoạt động
 
+Nó hoạt động theo giao thức UDP, sử dụng 2 port 68 cho client và 67 cho server.
+
 <img src="http://i1363.photobucket.com/albums/r714/HoangLove9z/33550_zpsi3bzo3ua.jpg" />
 
 - **Bước 1**: Client gửi một bản tin Discover - có chứa thông tin client (MAC, Tên máy tính,...) với dạng Broadcast để "truy tìm" một DHCP Server để xin cấp phát địa chỉ IP
